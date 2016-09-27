@@ -1,0 +1,1 @@
+print "vdmcli bonjour bonjour"
