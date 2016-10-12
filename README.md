@@ -1,6 +1,10 @@
-#### Produire un éxécutable avec pyinstaller
-`# pyinstaller vdmcli.py`
-Le résultat de l'éxécutable se trouvera dans le répertoire dist/vdmcli/ du projet
+#### Prérequis
+* pip => pour la gestion des packages python
+* virtualenv et virtualenvwrapper => pour l'installation et la création du projet
 
-#### Pour ajouter l'éxécutable dans ton path
-`# export PATH=$PATH:/Users/fprieur/.virtualenvs/vdmcli/dist/vdmcli/`
+---
+
+#### Pour installer le projet
+`# pip install --editable .`
+
+
