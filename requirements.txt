@@ -1,0 +1,20 @@
+appnope==0.1.0
+backports.shutil-get-terminal-size==1.0.0
+click==6.6
+-e git+git@github.com:fprieur/vdmcli.git@389a072b88c78b8de1091bca261395561d7a5d0d#egg=click_example_repo
+decorator==4.0.10
+enum34==1.1.6
+ipython==5.1.0
+ipython-genutils==0.1.0
+minitest==2.0.3
+pathlib2==2.1.0
+pexpect==4.2.1
+pickleshare==0.7.4
+prompt-toolkit==1.0.7
+ptyprocess==0.5.1
+Pygments==2.1.3
+simplegeneric==0.8.1
+six==1.10.0
+traitlets==4.3.0
+-e git+git@github.com:fprieur/vdmcli.git@389a072b88c78b8de1091bca261395561d7a5d0d#egg=vdmcli
+wcwidth==0.1.7
