@@ -7,15 +7,20 @@
 #### Installer les dépendances du projet
 `pip install -r requirements.txt`
 
+---
 
 #### Pour installer le projet
 `# pip install --editable .`
+
+---
 
 #### Pour lancer les tests du projet
 se positionner à la racine du projet 
 `python -m vdmcli_test`
 
-#### Pour lancer les tests automatique à modification des fichiers souce
+---
+
+#### Pour lancer les tests automatiquement à chaque modification des fichiers souce
 Ouvrir un autre fenetre de terminal, se positionner dans le répertoire
 et lancer la commande suivante pour installer pywatch<br>
 `pip install pywatch`
