@@ -16,7 +16,8 @@ se positionner à la racine du projet
 `python -m vdmcli_test`
 
 #### Pour lancer les tests automatique à modification des fichiers souce
-Ouvrir un autre fenetre de terminal, se positionner dans le répertoire et lancer la commande suivante pour installer pywatch<br>
+Ouvrir un autre fenetre de terminal, se positionner dans le répertoire<br>
+et lancer la commande suivante pour installer pywatch<br>
 `pip install pywatch`
 <br>
 pywatch est un utilitaire permettant d'éxécuter une commande lorsqu'un fichier est modifié
