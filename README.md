@@ -19,7 +19,7 @@ se positionner à la racine du projet
 Ouvrir un autre fenetre de terminal, se positionner dans le répertoire<br>
 et lancer la commande suivante pour installer pywatch<br>
 `pip install pywatch`
-<br>
+<br><br>
 pywatch est un utilitaire permettant d'éxécuter une commande lorsqu'un fichier est modifié
 <br>
 #### Pour lancer les tests automatiquement à chaque modification des fichiers source .py
