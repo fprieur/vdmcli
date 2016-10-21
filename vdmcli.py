@@ -14,7 +14,7 @@ def repo_create():
 @cli.command()
 def repo_webhook():
     """Créer des webhook sur un dépôt git"""
-    pass
+    print ("repo create")
 
 @cli.command()
 def repo_user():
