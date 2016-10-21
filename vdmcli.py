@@ -2,19 +2,23 @@
 # -*- coding: utf-8 -*-
 import click
 
+
 @click.group()
 def cli():
     pass
 
+
 @cli.command()
 def repo_create():
     """Créer une dépôt git"""
-    pass
+    print ("repo create")
+
 
 @cli.command()
 def repo_webhook():
     """Créer des webhook sur un dépôt git"""
-    print ("repo create")
+    print ("repo webhook create")
+
 
 @cli.command()
 def repo_user():
