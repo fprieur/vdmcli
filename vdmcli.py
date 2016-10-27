@@ -44,15 +44,20 @@ def jenkins_project(name):
 
 
 @cli.command()
+@click.option('--name', help='Project name')
+@click.option('--buildname', help='Build name')
 def jenkins_build():
     """Création d'un nouveau build dans un projet jenkins"""
-    print("création d'une nouvelle pipeline")
+    j = vdm_jenkins.Vdm_jenkins()
+    return j.createBuild(name, buildname)
 
 
 @cli.command()
+@click.option('--buildname', help='Build name')
 def jenkins_run():
     """Lancer le build d'un projet"""
-    print("le build jenkins a été lancée")
+    j = vdm_jenkins.Vdm_jenkins()
+    return j.runBuild(buildname)
 
 
 @cli.command()
