@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 if __name__ == '__main__':
 
     from minitest import *
@@ -8,15 +10,16 @@ if __name__ == '__main__':
     from mock import MagicMock
     from repo_bitbucket import repo_bitbucket
 
-    # runner = CliRunner()
-
-    # tester la création d'un nouveau dépôt avec un nom correct sans nom de projet
+    # tester la création d'un nouveau dépôt avec nom
     with test("create_repo_with_repo_name"):
         repo_create_mock = repo_bitbucket.Repo_bitbucket()
         repo_create_mock.createRepo = MagicMock(return_value="success")
         result = repo_create_mock.createRepo("nomdepot")
-        #result = runner.invoke(vdmcli.cli,
-        #                       ['repo_create', '--name', 'allotest'])
-        if (repo_create_mock.createRepo.assert_called_once_with("nomdepot")):
-            result.must_equal("success")
-    print result.ppl()
+        result.must_equal("success")
+
+    # tester la création d'un nouveau dépôt sans nom
+    with test("create_repo_without_repo_name"):
+        repo_create_mock = repo_bitbucket.Repo_bitbucket()
+        repo_create_mock.createRepo = MagicMock(return_value="error")
+        result = repo_create_mock.createRepo()
+        result.must_equal("error")
