@@ -10,7 +10,7 @@ if __name__ == '__main__':
     from mock import MagicMock
     from repo_bitbucket import repo_bitbucket
 
-    print("\n--- début des tests pour creations de webhook ---\n")
+    print("\n--- début des tests unitaires pour creations de webhook ---\n")
 
     # tester la création d'un nouveau dépôt avec nom
     with test("create_webhook_with_repo_name"):

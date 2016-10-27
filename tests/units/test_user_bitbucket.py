@@ -10,7 +10,7 @@ if __name__ == '__main__':
     from mock import MagicMock
     from repo_bitbucket import repo_bitbucket
 
-    print("\n--- début des tests pour ajout de user ---\n")
+    print("\n--- début des tests unitaires pour ajout de user ---\n")
 
     # tester la création d'un nouveau user avec nom en paramètre
     with test("create_repo_with_repo_name"):
