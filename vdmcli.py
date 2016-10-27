@@ -27,6 +27,13 @@ def repo_webhook():
 
 
 @cli.command()
+def get_repo_webhook():
+    """Créer des webhook sur un dépôt git"""
+    b = repo_bitbucket.Repo_bitbucket()
+    return b.getwebhook()
+
+
+@cli.command()
 def repo_user():
     """Créer des usagers pour des groupes à l'intérieur d'une organisation
     bitbucket"""

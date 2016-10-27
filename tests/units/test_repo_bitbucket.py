@@ -8,7 +8,7 @@ if __name__ == '__main__':
     from mock import MagicMock
     from repo_bitbucket import repo_bitbucket
 
-    runner = CliRunner()
+    # runner = CliRunner()
 
     # tester la création d'un nouveau dépôt avec un nom correct sans nom de projet
     with test("create_repo_with_repo_name"):
