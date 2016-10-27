@@ -1,33 +1,40 @@
-#### Prérequis
-* pip => pour la gestion des packages python
-* virtualenv et virtualenvwrapper => pour l'installation et la création du projet
+### Description
+Le projet est un client de type commandline qui permet d'éxécuter plusieurs tâches redondantes dans un pipeline de déploiement d'un projet.
+
+### Exigences fonctionnelles
+* Le code du projet doit se trouver dans un repertoire /src
+* Un fichier nommé vdm.yaml doit se trouver à la racine de votre projet
+* pour l'utilisation de bitbucket, vous devez configurer certaines variables d'environnement
 
 ---
+
+### Installation
+
+#### Pré-requis d'installation
+* pip
+* git
+* python 2.7+
 
 #### Installer les dépendances du projet
 `$ pip install -r requirements.txt`
 
----
+#### Préparer l'installation du projet
+`$ python setup.py install`
 
 #### Pour installer le projet
 `$ pip install --editable .`
 
+#### Valider l'installation
+`$ vdmcli --help`<br>
+Vous devriez voir les commandes disponibles
+
 ---
+
+### Tests
 
 #### Pour lancer les tests du projet
-se positionner à la racine du projet 
-`$ python -m vdmcli_test`
+se positionner à la racine du projet <br>
+`$ ./runtest.sh` <br>
+(le fichier doit être exécutable)
 
 ---
-
-#### Pour lancer les tests automatiquement à chaque modification des fichiers souce
-Ouvrir un autre fenetre de terminal, se positionner dans le répertoire
-et lancer la commande suivante pour installer pywatch<br>
-`$ pip install pywatch`
-<br><br>
-pywatch est un utilitaire permettant d'éxécuter une commande lorsqu'un fichier est modifié
-<br>
-#### Pour lancer les tests automatiquement à chaque modification des fichiers source .py
-`$ pywatch "python -m vdmcli_test" *.py`
-
-
