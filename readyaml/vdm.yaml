@@ -1,0 +1,17 @@
+project:
+  name: monprojetnode-api
+  language: node_js
+  node_js:
+    - "6"
+
+  scm: bitbucket
+  users:
+    - "username1"
+    - "user@gmail.com"
+
+  ci: jenkins
+
+  tests:
+    directory: ./tests
+    units: ./units
+    integration: ./integration
