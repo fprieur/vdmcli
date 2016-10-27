@@ -28,6 +28,10 @@ Le projet est un client de type commandline qui permet d'éxécuter plusieurs t�
 `$ vdmcli --help`<br>
 Vous devriez voir les commandes disponibles
 
+#### Pour l'interaction avec Bitbucket
+vous devez ajouter les variables d'environnement suivante
+* BITBUCKET_USER
+* BITBUCKET_PASS
 ---
 
 ### Tests
