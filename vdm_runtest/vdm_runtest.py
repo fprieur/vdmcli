@@ -7,12 +7,12 @@ class Vdm_runtest(object):
 
     def testsUnits(self):
         #  to be implement
-        print "success" if true else "error"
+        print "success" if True else "error"
 
     def testsIntegration(self):
         #  to be implement
-        print "success" if true else "error"
+        print "success" if True else "error"
 
     def testsLoad(self):
         #  to be implement
-        print "success" if true else "error"
+        print "success" if True else "error"

@@ -4,6 +4,7 @@
 import click
 from repo_bitbucket import repo_bitbucket
 from vdm_jenkins import vdm_jenkins
+from vdm_runtest import vdm_runtest
 
 
 @click.group()
@@ -63,16 +64,18 @@ def jenkins_run():
 @cli.command()
 def tests_units():
     """Lancer l'éxécution des tests unitaires"""
-    print("L'éxécution des tests unitaires a été lancée")
+    t = vdm_runtest.Vdm_runtest()
+    return t.testsUnits()
 
 
 @cli.command()
 def tests_integration():
-    """Lancer l'éxécution des tests d'intégration"""
-    print("L'éxécution des tests d'intégration a été lancée")
+    t = vdm_runtest.Vdm_runtest()
+    return t.testsIntegration()
 
 
 @cli.command()
 def tests_load():
     """Lancer l'éxécution des tests de charge"""
-    print("L'éxécution des tests de charge a été lancée")
+    t = vdm_runtest.Vdm_runtest()
+    return t.testsLoad()
