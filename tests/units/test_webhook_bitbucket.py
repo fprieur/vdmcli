@@ -13,7 +13,7 @@ if __name__ == '__main__':
     # tester la création d'un nouveau dépôt avec nom
     with test("create_repo_with_repo_name"):
         repo_create_mock = repo_bitbucket.Repo_bitbucket()
-        repo_create_mock.createRepo = MagicMock(return_value="success")
+        repo_create_mock.createWebhook = MagicMock(return_value="success")
         result = repo_create_mock.createRepo("nomdepot")
         result.must_equal("success")
 
