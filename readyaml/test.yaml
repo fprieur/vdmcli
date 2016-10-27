@@ -1,0 +1,16 @@
+services:
+  orocommerce-web:
+    container_name: orocommerce
+    image: vdmtl/orocommerce
+    volumes:
+      - .:/var/www/html
+    ports:
+     - "3044:4200"
+    links:
+      - "orocommerce-web-bd:orocommerce-web-bd"
+
+  orocommerce-web-bd:
+    container_name: orocommerce-bd
+    image: mysql:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
