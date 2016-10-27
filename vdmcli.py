@@ -3,6 +3,7 @@
 
 import click
 from repo_bitbucket import repo_bitbucket
+from vdm_jenkins import vdm_jenkins
 
 
 @click.group()
@@ -27,13 +28,6 @@ def repo_webhook():
 
 
 @cli.command()
-def get_repo_webhook():
-    """Créer des webhook sur un dépôt git"""
-    b = repo_bitbucket.Repo_bitbucket()
-    return b.getwebhook()
-
-
-@cli.command()
 def repo_user():
     """Créer des usagers pour des groupes à l'intérieur d'une organisation
     bitbucket"""
@@ -42,20 +36,22 @@ def repo_user():
 
 
 @cli.command()
-def jenkins_create():
+@click.option('--name', help='Project name')
+def jenkins_project(name):
     """Création d'un nouveau projet dans jenkins"""
-    print("création d'un projet jenkins")
-
-
-@cli.command()
-def jenkins_pipeline():
-    """Création d'une nouvelle pipeline dans un projet jenkins"""
-    print("création d'une nouvelle pipeline")
+    j = vdm_jenkins.Vdm_jenkins()
+    return j.createProject(name)
 
 
 @cli.command()
 def jenkins_build():
-    """Lancer le build jenkins d'un pipeline d'un projet"""
+    """Création d'un nouveau build dans un projet jenkins"""
+    print("création d'une nouvelle pipeline")
+
+
+@cli.command()
+def jenkins_run():
+    """Lancer le build d'un projet"""
     print("le build jenkins a été lancée")
 
 
