@@ -10,15 +10,20 @@ if __name__ == '__main__':
     from mock import MagicMock
     from repo_bitbucket import repo_bitbucket
 
+    print("\n--- début des tests pour creations de webhook ---\n")
+
     # tester la création d'un nouveau dépôt avec nom
-    with test("create_repo_with_repo_name"):
-        repo_create_mock = repo_bitbucket.Repo_bitbucket()
-        repo_create_mock.createWebhook = MagicMock(return_value="success")
-        result = repo_create_mock.createRepo("nomdepot")
+    with test("create_webhook_with_repo_name"):
+        webhook_create_mock = repo_bitbucket.Repo_bitbucket()
+        webhook_create_mock.createWebhook = MagicMock(return_value="success")
+        result = webhook_create_mock.createWebhook("nomdepot",
+                                                   "nomprojet",
+                                                   "unwebhook",
+                                                   "http://example.com")
         result.must_equal("success")
 
     # tester la création d'un nouveau dépôt sans nom
-    with test("create_repo_without_repo_name"):
+    with test("create_webhook_without_repo_name"):
         repo_create_mock = repo_bitbucket.Repo_bitbucket()
         repo_create_mock.createRepo = MagicMock(return_value="error")
         result = repo_create_mock.createRepo()

@@ -10,6 +10,8 @@ if __name__ == '__main__':
     from mock import MagicMock
     from repo_bitbucket import repo_bitbucket
 
+    print("\n--- début des tests pour creations de repo ---\n")
+
     # tester la création d'un nouveau dépôt avec nom
     with test("create_repo_with_repo_name"):
         repo_create_mock = repo_bitbucket.Repo_bitbucket()
