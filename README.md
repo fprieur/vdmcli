@@ -28,7 +28,7 @@ Le projet est un client de type commandline qui permet d'éxécuter plusieurs t�
 `$ vdmcli --help`<br>
 Vous devriez voir les commandes disponibles
 <br>
-Les commandes avec un astérix ne sont pas encore implémentées
+Les commandes avec un astérix ne sont pas encore complétement implémentées
 
 #### Pour l'interaction avec Bitbucket
 vous devez ajouter les variables d'environnement suivante

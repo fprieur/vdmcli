@@ -1,7 +1,7 @@
 import ruamel.yaml as yaml
 
 
-class Readyaml(object):
+class Readfile(object):
     def __init__(self):
         self.file = "reponame"
 
