@@ -2,6 +2,7 @@ appnope==0.1.0
 backports.shutil-get-terminal-size==1.0.0
 bitbucket-api==0.5.0
 click==6.6
+-e git+git@github.com:fprieur/vdmcli.git@d90a1c53827870a6078925df278b08b69930f1e4#egg=click_example_repo
 decorator==4.0.10
 enum34==1.1.6
 funcsigs==1.0.2
@@ -32,5 +33,5 @@ six==1.10.0
 traitlets==4.3.0
 typing==3.5.2.2
 uritemplate==0.6
--e git+git@github.com:fprieur/vdmcli.git@aaf578c5f7bd8d1cd45cd693bf92aeac0315821b#egg=vdmcli
+-e git+git@github.com:fprieur/vdmcli.git@d90a1c53827870a6078925df278b08b69930f1e4#egg=vdmcli
 wcwidth==0.1.7
