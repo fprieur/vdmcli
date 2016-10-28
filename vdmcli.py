@@ -15,10 +15,11 @@ def cli():
 @cli.command()
 @click.option('--name', help='Repo name')
 @click.option('--project', default="test", help='Project name')
+@click.option('--org', help='owner name')
 def repo_create(name, project):
     """Créer une dépôt git"""
     b = repo_bitbucket.Repo_bitbucket()
-    return b.createRepo(name, project)
+    return b.createRepo(name, project, owner)
 
 
 @cli.command()

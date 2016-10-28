@@ -16,7 +16,7 @@ if __name__ == '__main__':
     with test("create_repo_with_repo_name"):
         repo_create_mock = repo_bitbucket.Repo_bitbucket()
         repo_create_mock.createRepo = MagicMock(return_value="success")
-        result = repo_create_mock.createRepo("nomdepot")
+        result = repo_create_mock.createRepo("nomdepot", "nomprojet", "nomowner")
         result.must_equal("success")
 
     # tester la création d'un nouveau dépôt sans nom

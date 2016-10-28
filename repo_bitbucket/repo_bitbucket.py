@@ -9,12 +9,12 @@ class Repo_bitbucket(object):
         self.project_name = "reponame"
 
     # permet de créér des dépôts sur bitbucket
-    def createRepo(self, repo_name, project):
+    def createRepo(self, repo_name, owner, project):
         bb = authBitbucket()
         repo = bb.repository.create(repo_name=repo_name,
                                     scm='git',
                                     private=True,
-                                    owner="testvdm",
+                                    owner=owner,
                                     project=project)
         print "success" if repo[0] else "error"
 
