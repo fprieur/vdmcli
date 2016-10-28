@@ -44,4 +44,8 @@ se positionner à la racine du projet <br>
 `$ ./runtest.sh` <br>
 (le fichier doit être exécutable)
 
+#### Pour lancer les tests d'acceptation du projet
+se positionner à la racine du projet <br>
+`$ lettuce /tests` <br>
+(les tests sont éxécuter avec lettuce installé préalablement)
 ---
