@@ -39,7 +39,7 @@ vous devez ajouter les variables d'environnement suivante
 
 ### Tests
 
-#### Pour lancer les tests du projet
+#### Pour lancer les tests unitaires du projet
 se positionner à la racine du projet <br>
 `$ ./runtest.sh` <br>
 (le fichier doit être exécutable)
