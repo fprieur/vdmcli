@@ -55,7 +55,7 @@ def jenkins_view(viewname):
 
 @cli.command()
 @click.option('--buildname', help='Build name')
-def jenkins_run():
+def jenkins_run(buildname):
     """* Lancer le build d'un projet"""
     j = vdm_jenkins.Vdm_jenkins()
     return j.runBuild(buildname)

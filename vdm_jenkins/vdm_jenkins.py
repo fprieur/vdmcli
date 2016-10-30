@@ -23,9 +23,12 @@ class Vdm_jenkins(object):
             print ("erreur : " + str(e))
 
     def runBuild(self, build_name):
-        #  to be implement
-        print "success" if build_name else "error"
-
+        try:
+            server = self.authJenkins()
+            server.build_job(build_name)
+            print "success"
+        except Exception, e:
+            print ("erreur : " + str(e))
 
     def authJenkins(self):
         server = jenkins.Jenkins("http://localhost:8080",
