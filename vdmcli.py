@@ -38,20 +38,19 @@ def repo_user():
 
 
 @cli.command()
-@click.option('--name', help='Project name')
-def jenkins_project(name):
-    """* Création d'un nouveau projet dans jenkins"""
+@click.option('--buildname', help='Build name')
+def jenkins_build(buildname):
+    """* Création d'un nouveau build dans jenkins"""
     j = vdm_jenkins.Vdm_jenkins()
-    return j.createProject(name)
+    return j.createBuild(buildname)
 
 
 @cli.command()
-@click.option('--name', help='Project name')
-@click.option('--buildname', help='Build name')
-def jenkins_build():
-    """* Création d'un nouveau build dans un projet jenkins"""
+@click.option('--viewname', help='View name')
+def jenkins_view(viewname):
+    """* Création d'une nouvelle view dans jenkins"""
     j = vdm_jenkins.Vdm_jenkins()
-    return j.createBuild(name, buildname)
+    return j.createView(viewname)
 
 
 @cli.command()
