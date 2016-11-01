@@ -4,7 +4,7 @@ from bitbucket.bitbucket import Bitbucket
 import os
 
 
-class Repo_bitbucket(object):
+class Vdm_bitbucket(object):
     def __init__(self):
         self.project_name = "reponame"
 
