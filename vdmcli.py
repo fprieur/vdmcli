@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import click
-from vdm_bitbucket import vdm_bitbucket
+from vdm_scm import vdm_scm
 from vdm_jenkins import vdm_jenkins
 from vdm_runtest import vdm_runtest
 
@@ -18,14 +18,14 @@ def cli():
 @click.option('--org', help='owner name')
 def repo_create(name, project):
     """Créer une dépôt git"""
-    b = vdm_bitbucket.Vdm_bitbucket()
+    b = vdm_scm.Vdm_bitbucket()
     return b.createRepo(name, project, owner)
 
 
 @cli.command()
 def repo_webhook():
     """Créer des webhook sur un dépôt git"""
-    b = vdm_bitbucket.Vdm_bitbucket()
+    b = vdm_scm.Vdm_bitbucket()
     return b.createWebhook()
 
 
@@ -33,7 +33,7 @@ def repo_webhook():
 def repo_user():
     """* Créer des usagers pour des groupes à l'intérieur d'une organisation
     bitbucket"""
-    b = vdm_bitbucket.Vdm_bitbucket()
+    b = vdm_scm.Vdm_bitbucket()
     return b.createUser("un user")
 
 
