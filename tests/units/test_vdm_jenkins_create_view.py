@@ -14,12 +14,12 @@ if __name__ == '__main__':
     with test("create_jenkins_build_with_correct_param"):
         vdm_jenkins_create_view_mock = vdm_jenkins.Vdm_jenkins()
         vdm_jenkins_create_view_mock.createView = MagicMock(return_value="success")
-        result = vdm_jenkins_create_build_mock.createView("viewtoto")
+        result = vdm_jenkins_create_view_mock.createView("viewtoto")
         result.must_equal("success")
 
     # tester la création d'un nouveau dépôt sans nom
     with test("create_jenkins_build_without_param"):
         vdm_jenkins_create_view_mock = vdm_jenkins.Vdm_jenkins()
         vdm_jenkins_create_view_mock.createView = MagicMock(return_value="error")
-        result = vdm_jenkins_create_build_mock.createView()
+        result = vdm_jenkins_create_view_mock.createView()
         result.must_equal("error")
